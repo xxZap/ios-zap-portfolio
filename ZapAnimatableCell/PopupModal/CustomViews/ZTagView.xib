@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoU-q1-evk" userLabel="FirstTag" customClass="ZTagView" customModule="ZapAnimatableCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="255" height="47"/>
+            <subviews>
+                <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4d-Id-Srg">
+                    <rect key="frame" x="0.0" y="0.0" width="74" height="47"/>
+                    <color key="backgroundColor" red="0.81128057350000005" green="0.32339026749999999" blue="0.25526258680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="contentEdgeInsets" minX="14" minY="4" maxX="14" maxY="4"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="i4d-Id-Srg" firstAttribute="leading" secondItem="aoU-q1-evk" secondAttribute="leading" id="4OH-gQ-t4m"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i4d-Id-Srg" secondAttribute="trailing" id="OH1-RL-mRz"/>
+                <constraint firstItem="i4d-Id-Srg" firstAttribute="top" secondItem="aoU-q1-evk" secondAttribute="top" id="XeG-fZ-EzE"/>
+                <constraint firstAttribute="bottom" secondItem="i4d-Id-Srg" secondAttribute="bottom" id="bzY-Nw-MaN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="bWN-t6-Hzo"/>
+            <connections>
+                <outlet property="button" destination="i4d-Id-Srg" id="2GU-3G-Xc8"/>
+            </connections>
+            <point key="canvasLocation" x="-36" y="-127.28635682158921"/>
+        </view>
+    </objects>
+</document>

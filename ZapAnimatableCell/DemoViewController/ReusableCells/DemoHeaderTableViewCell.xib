@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="sbC-FY-jtn" customClass="DemoHeaderTableViewCell" customModule="ZapAnimatableCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="103"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sbC-FY-jtn" id="zpK-HF-Lhp">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="102.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq9-ys-QDv">
+                        <rect key="frame" x="24" y="24" width="353" height="21.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orQ-Dc-ofh">
+                        <rect key="frame" x="24" y="49.5" width="353" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Lq9-ys-QDv" firstAttribute="leading" secondItem="zpK-HF-Lhp" secondAttribute="leading" constant="24" id="Czr-vL-SmU"/>
+                    <constraint firstItem="orQ-Dc-ofh" firstAttribute="leading" secondItem="zpK-HF-Lhp" secondAttribute="leading" constant="24" id="OXM-EE-ffZ"/>
+                    <constraint firstAttribute="trailing" secondItem="Lq9-ys-QDv" secondAttribute="trailing" constant="24" id="UEc-IK-a3C"/>
+                    <constraint firstAttribute="trailing" secondItem="orQ-Dc-ofh" secondAttribute="trailing" constant="24" id="oNG-dh-3v9"/>
+                    <constraint firstItem="Lq9-ys-QDv" firstAttribute="top" secondItem="zpK-HF-Lhp" secondAttribute="top" constant="24" id="qQL-2k-QLa"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="orQ-Dc-ofh" secondAttribute="bottom" constant="16" id="s8y-Xp-xYU"/>
+                    <constraint firstItem="orQ-Dc-ofh" firstAttribute="top" secondItem="Lq9-ys-QDv" secondAttribute="bottom" constant="4" id="vUH-EG-I69"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="orQ-Dc-ofh" id="S8J-JR-RSq"/>
+                <outlet property="titleLabel" destination="Lq9-ys-QDv" id="ZDn-iy-myV"/>
+            </connections>
+            <point key="canvasLocation" x="-213.59999999999999" y="-94.902548725637189"/>
+        </tableViewCell>
+    </objects>
+</document>
