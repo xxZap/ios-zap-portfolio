@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ZapAnimatableCell.xcodeproj">
+      location = "group:/Users/zap/Projects/ios-zapportfolio/iOS-ZapPortfolio.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -1,5 +1,5 @@
 //
-//  DemoOptionViewController.swift
+//  QuoteModalChildViewController.swift
 //  ZapAnimatableCell
 //
 //  Created by Alessio Boerio on 28/03/2019.
@@ -17,7 +17,7 @@ import AlamofireImage
 ///
 /// - **Opinionated Quote**: random quote.
 ///     https://opinionated-quotes-api.gigalixirapp.com
-class DemoOptionViewController: ZModalChildViewController {
+class QuoteModalChildViewController: ZModalChildViewController {
 
     // MARK: - Outlets
     /// The view whose height is passed to the `modalParentViewController` to calculate the correct size to be shown.
@@ -63,7 +63,7 @@ class DemoOptionViewController: ZModalChildViewController {
 }
 
 // MARK: - Private functions
-extension DemoOptionViewController {
+extension QuoteModalChildViewController {
     /// Configure the graphic of this ViewController
     internal func setupUI() {
         photoImageView.layer.masksToBounds = true

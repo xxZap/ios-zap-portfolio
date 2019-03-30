@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// This view controller has a simple UITableView with custom cell.
+/// The cells have custom animations and behaviours and, on tap, they open the `QuoteModalViewController`
 class DemoViewController: UIViewController {
 
     enum Section {
@@ -62,7 +64,7 @@ extension DemoViewController {
 
     internal func openQuoteVC(withQuote quote: ZQuote?) {
         guard let quote = quote, let viewController = ZModalViewController.fromNib() else { return }
-        let childVC = DemoOptionViewController.fromNib()
+        let childVC = QuoteModalChildViewController.fromNib()
         childVC?.quote = quote
         viewController.loadViewController(childVC)
         viewController.modalPresentationStyle = .overCurrentContext

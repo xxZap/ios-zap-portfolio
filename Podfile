@@ -9,6 +9,6 @@ def shared_pods
 end
 
 
-target 'ZapAnimatableCell' do
+target 'iOS-ZapPortfolio' do
     shared_pods
 end
