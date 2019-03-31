@@ -29,7 +29,7 @@
         <!--Demo View Controller-->
         <scene sceneID="4Oi-N8-bGa">
             <objects>
-                <viewController id="esy-Fy-JmX" customClass="DemoViewController" customModule="ZapAnimatableCell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="esy-Fy-JmX" customClass="DemoViewController" customModule="iOS_ZapPortfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QbD-x2-Tzh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

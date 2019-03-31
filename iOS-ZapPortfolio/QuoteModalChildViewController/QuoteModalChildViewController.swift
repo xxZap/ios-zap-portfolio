@@ -43,7 +43,7 @@ class QuoteModalChildViewController: ZModalChildViewController {
     // MARK: - ZModalChildViewController overrides
     override func getTopBarColor() -> UIColor? { return ZTheme.PaletteColor.primaryColor }
     override func getTopLineColor() -> UIColor? { return UIColor.white }
-    override func getHeight() -> CGFloat { return min(mainContent.frame.height, UIScreen.main.bounds.height - 100) }
+    override func getHeight() -> CGFloat { return mainContent.frame.height }
 
     // MARK: - Life-cycle
     override func viewDidLoad() {

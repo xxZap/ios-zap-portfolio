@@ -109,7 +109,7 @@
 				25809A7B224E3C3200D3FA98 /* Models */,
 				25417748224A3A54005D2789 /* AppDelegate.swift */,
 				2541774C224A3A54005D2789 /* Main.storyboard */,
-				25FDBF5F224D82D60059368E /* QuoteModal */,
+				25FDBF5F224D82D60059368E /* QuoteModalChildViewController */,
 				25417760224A3C00005D2789 /* DemoViewController */,
 				25417752224A3A56005D2789 /* Assets.xcassets */,
 				25417754224A3A56005D2789 /* LaunchScreen.storyboard */,
@@ -204,14 +204,14 @@
 			path = CustomComponents;
 			sourceTree = "<group>";
 		};
-		25FDBF5F224D82D60059368E /* QuoteModal */ = {
+		25FDBF5F224D82D60059368E /* QuoteModalChildViewController */ = {
 			isa = PBXGroup;
 			children = (
 				25FDBF62224D84130059368E /* QuoteModalChildViewController.swift */,
 				25FDBF64224D84410059368E /* QuoteModalChildViewController.xib */,
 				25E9E975224E674F0028DC5B /* CustomViews */,
 			);
-			path = QuoteModal;
+			path = QuoteModalChildViewController;
 			sourceTree = "<group>";
 		};
 		3D7BAF9DA3AE82AA0DEBC889 /* Pods */ = {
@@ -529,6 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3WUNKJ2GAD;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-ZapPortfolio/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,6 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3WUNKJ2GAD;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS-ZapPortfolio/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

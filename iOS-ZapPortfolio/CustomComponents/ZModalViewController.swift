@@ -101,14 +101,20 @@ class ZModalViewController: UIViewController {
     /// A simple view anchored to the bottom of the `containerView` that becomes visible once the user swipe up.
     @IBOutlet weak fileprivate var outOfScreenView: UIView!
 
+    /// This is the scrollview that contains the `containerView`.
+    @IBOutlet weak var scrollContainerView: UIScrollView!
+
     /// This is the container view that contains the `subViewController`.
     @IBOutlet weak var containerView: UIView!
 
-    /// This constraint allow this view controller to move the containerView vertically.
+    /// This constraint allows this view controller to move the containerView vertically.
     @IBOutlet weak fileprivate var constraintFromBottom: NSLayoutConstraint!
 
     /// The height of the `containerView`.
     @IBOutlet weak fileprivate var containerViewHeightConstraint: NSLayoutConstraint!
+
+    /// The height of the `scrollContainerView`.
+    @IBOutlet weak fileprivate var scrollContainerViewHeightConstraint: NSLayoutConstraint!
 
     /// The line view to give a feedback to the user that the view is draggable.
     @IBOutlet weak fileprivate var handleView: UIView!
@@ -117,18 +123,20 @@ class ZModalViewController: UIViewController {
     weak var subViewController: ZModalChildViewController?
 
     // drag gesture stuff
-    fileprivate var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
-    fileprivate var animationTime = 0.5
-    fileprivate var backgroundMaxOpacity: CGFloat = 0.66
-    fileprivate var viewIsDragging: Bool = false
+    internal var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+    internal var animationTime = 0.5
+    internal var backgroundMaxOpacity: CGFloat = 0.66
+    internal var viewIsDragging: Bool = false
+    internal var draggableViewPanGesture: UIPanGestureRecognizer?
+    internal var scrollViewPanGesture: UIPanGestureRecognizer?
 
     /// is the maximum height that will be used to calculate the return-bounce or the dismissable-distance.
     fileprivate var maxContainerHeight: CGFloat {
         get {
-            return containerViewHeightConstraint.constant
+            return min(scrollContainerViewHeightConstraint.constant, UIScreen.main.bounds.height - 100)
         }
         set {
-            containerViewHeightConstraint.constant = newValue
+            scrollContainerViewHeightConstraint.constant = min(newValue, UIScreen.main.bounds.height - 100)
         }
     }
 
@@ -167,6 +175,7 @@ class ZModalViewController: UIViewController {
         super.viewDidAppear(animated)
         if isFirstAppearance {
             isFirstAppearance = false
+            scrollContainerView.delegate = self
             updateContainer()
             setBottomConstraint(to: maxContainerHeight)
         }
@@ -179,9 +188,15 @@ class ZModalViewController: UIViewController {
         // graphics
         viewBG.alpha = 0
 
+        // gesture
+        draggableViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(draggableViewDidPan(_:)))
+        draggableViewPanGesture?.delegate = self
+        scrollViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(draggableViewDidPan(_:)))
+        scrollViewPanGesture?.delegate = self
+
         // actions
-        draggableView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(draggableViewDidPan(_:))))
-        containerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(draggableViewDidPan(_:))))
+        draggableView.addGestureRecognizer(draggableViewPanGesture!)
+        scrollContainerView.addGestureRecognizer(scrollViewPanGesture!)
         availableSpaceView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissDidTap(_:))))
 
         // constraints
@@ -195,25 +210,26 @@ class ZModalViewController: UIViewController {
 
     /// Comunicate with `subViewController` to get its height and update the height of the `containerView`.
     /// Animated.
-    fileprivate func updateContainer() {
+    internal func updateContainer() {
         if let subViewController = self.subViewController {
             subViewController.modalParentViewController = self
             let subHeight = subViewController.getHeight()
             self.maxContainerHeight = subHeight
+            self.containerViewHeightConstraint.constant = subHeight
             self.outOfScreenView.backgroundColor = subViewController.getBackgroundColor()
             self.topCornerView.backgroundColor = subViewController.getTopBarColor()
             if let lineColor = subViewController.getTopLineColor() { self.handleView.backgroundColor = lineColor }
         } else {
             self.maxContainerHeight = 300
+            self.containerViewHeightConstraint.constant = 300
         }
     }
 
     /// Set the position of the MainView.
     ///
     /// - Parameter value: the desired position.
-    fileprivate func setBottomConstraint(to value: CGFloat, animated: Bool = true, alpha: CGFloat = 1, duration: Double? = nil) {
+    internal func setBottomConstraint(to value: CGFloat, animated: Bool = true, alpha: CGFloat = 1, duration: Double? = nil) {
         maxContainerHeight = value
-        containerViewHeightConstraint.constant = maxContainerHeight
         constraintFromBottom.constant = maxContainerHeight
         if animated {
             UIView.animate(withDuration: duration ?? animationTime) { [weak self] in
@@ -226,7 +242,7 @@ class ZModalViewController: UIViewController {
         }
     }
 
-    // MARK: - IBAction
+    // MARK: - IBActions
 
     /// The user tapped the `availableSpaceView`
     @objc func dismissDidTap(_ sender: UITapGestureRecognizer) {
@@ -243,14 +259,19 @@ class ZModalViewController: UIViewController {
             viewIsDragging = true
             initialTouchPoint = touchPoint
         } else if sender.state == UIGestureRecognizer.State.changed, sender.numberOfTouches == 1 {
-            if touchPoint.y - initialTouchPoint.y > 0 {
-                constraintFromBottom.constant =  maxContainerHeight - (touchPoint.y - initialTouchPoint.y)
-                let alfaPan = 1 - ((maxContainerHeight - constraintFromBottom.constant) / maxContainerHeight)
-                viewBG.alpha = alfaPan
+            if scrollContainerView.contentOffset.y == 0 {
+                if touchPoint.y - initialTouchPoint.y > 0 {
+                    constraintFromBottom.constant =  maxContainerHeight - (touchPoint.y - initialTouchPoint.y)
+                    let alfaPan = 1 - ((maxContainerHeight - constraintFromBottom.constant) / maxContainerHeight)
+                    viewBG.alpha = alfaPan
+                } else {
+                    constraintFromBottom.constant =  maxContainerHeight - (touchPoint.y - initialTouchPoint.y) * 0.5
+                    self.view.layoutIfNeeded()
+                }
             } else {
-                constraintFromBottom.constant =  maxContainerHeight - (touchPoint.y - initialTouchPoint.y) * 0.5
-                self.view.layoutIfNeeded()
+                initialTouchPoint = touchPoint
             }
+
         } else if sender.state == UIGestureRecognizer.State.ended || sender.state == UIGestureRecognizer.State.cancelled {
             if sender.numberOfTouches == 0 {
                 viewIsDragging = false
@@ -351,5 +372,17 @@ class ZModalViewController: UIViewController {
         self.subViewController?.modalParentViewController = self
 
         self.setOffScreenColor(newSubViewController.view.backgroundColor)
+    }
+}
+
+extension ZModalViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+    }
+}
+
+extension ZModalViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
