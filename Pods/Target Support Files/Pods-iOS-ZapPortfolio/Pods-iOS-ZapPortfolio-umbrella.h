@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ZapAnimatableCellVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ZapAnimatableCellVersionString[];
+FOUNDATION_EXPORT double Pods_iOS_ZapPortfolioVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_iOS_ZapPortfolioVersionString[];
 

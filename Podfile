@@ -5,7 +5,8 @@ def shared_pods
     pod 'Alamofire'
     pod 'AlamofireImage', '~> 3.5'
     pod 'Argo'
-    pod 'Curry'    
+    pod 'Curry'
+    pod 'ZModalVC'
 end
 
 

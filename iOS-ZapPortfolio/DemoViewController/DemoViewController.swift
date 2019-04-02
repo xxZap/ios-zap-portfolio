@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZModalVC
 
 /// This view controller has a simple UITableView with custom cell.
 /// The cells have custom animations and behaviours and, on tap, they open the `QuoteModalViewController`

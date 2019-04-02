@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-iOS-ZapPortfolio/Pods-iOS-ZapPortfolio-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework
+${BUILT_PRODUCTS_DIR}/Argo/Argo.framework
+${BUILT_PRODUCTS_DIR}/Curry/Curry.framework
+${BUILT_PRODUCTS_DIR}/Runes/Runes.framework
+${BUILT_PRODUCTS_DIR}/ZModalVC/ZModalVC.framework

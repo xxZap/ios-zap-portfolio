@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,15 +29,13 @@
 		25E9E97D224E78740028DC5B /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E9E97C224E78740028DC5B /* QuoteService.swift */; };
 		25E9E97F224E79290028DC5B /* ZQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E9E97E224E79290028DC5B /* ZQuote.swift */; };
 		25E9E981224FD8A30028DC5B /* ZTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E9E980224FD8A30028DC5B /* ZTagView.swift */; };
-		25FDBF5E224D800C0059368E /* ZModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FDBF5C224D800C0059368E /* ZModalViewController.xib */; };
-		25FDBF61224D839B0059368E /* ZModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FDBF60224D839B0059368E /* ZModalViewController.swift */; };
 		25FDBF63224D84130059368E /* QuoteModalChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FDBF62224D84130059368E /* QuoteModalChildViewController.swift */; };
 		25FDBF65224D84410059368E /* QuoteModalChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25FDBF64224D84410059368E /* QuoteModalChildViewController.xib */; };
-		BC06C109B101AEB5B4C86D1B /* Pods_ZapAnimatableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174EF0A3097D645F6E8286FE /* Pods_ZapAnimatableCell.framework */; };
+		8342CB00647E57E45A67C9B7 /* Pods_iOS_ZapPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E9328079C112B7D298A7BB /* Pods_iOS_ZapPortfolio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		174EF0A3097D645F6E8286FE /* Pods_ZapAnimatableCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZapAnimatableCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E9328079C112B7D298A7BB /* Pods_iOS_ZapPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ZapPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25417745224A3A54005D2789 /* iOS-ZapPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-ZapPortfolio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25417748224A3A54005D2789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2541774A224A3A54005D2789 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
@@ -62,11 +60,11 @@
 		25E9E97C224E78740028DC5B /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
 		25E9E97E224E79290028DC5B /* ZQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQuote.swift; sourceTree = "<group>"; };
 		25E9E980224FD8A30028DC5B /* ZTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTagView.swift; sourceTree = "<group>"; };
-		25FDBF5C224D800C0059368E /* ZModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZModalViewController.xib; sourceTree = "<group>"; };
-		25FDBF60224D839B0059368E /* ZModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZModalViewController.swift; sourceTree = "<group>"; };
 		25FDBF62224D84130059368E /* QuoteModalChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModalChildViewController.swift; sourceTree = "<group>"; };
 		25FDBF64224D84410059368E /* QuoteModalChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteModalChildViewController.xib; sourceTree = "<group>"; };
+		2CCEA6B2B46DDBB85A2D1E51 /* Pods-iOS-ZapPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-ZapPortfolio.debug.xcconfig"; path = "Target Support Files/Pods-iOS-ZapPortfolio/Pods-iOS-ZapPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		451AC11195531F1BD8445DE2 /* Pods-ZapAnimatableCell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZapAnimatableCell.debug.xcconfig"; path = "Target Support Files/Pods-ZapAnimatableCell/Pods-ZapAnimatableCell.debug.xcconfig"; sourceTree = "<group>"; };
+		935B83D62565703C0BC759CA /* Pods-iOS-ZapPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-ZapPortfolio.release.xcconfig"; path = "Target Support Files/Pods-iOS-ZapPortfolio/Pods-iOS-ZapPortfolio.release.xcconfig"; sourceTree = "<group>"; };
 		F783A748BD1855968574982E /* Pods-ZapAnimatableCell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZapAnimatableCell.release.xcconfig"; path = "Target Support Files/Pods-ZapAnimatableCell/Pods-ZapAnimatableCell.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC06C109B101AEB5B4C86D1B /* Pods_ZapAnimatableCell.framework in Frameworks */,
+				8342CB00647E57E45A67C9B7 /* Pods_iOS_ZapPortfolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +101,6 @@
 		25417747224A3A54005D2789 /* iOS-ZapPortfolio */ = {
 			isa = PBXGroup;
 			children = (
-				25FDBF5A224D7FFD0059368E /* CustomComponents */,
 				2541775D224A3BAF005D2789 /* Utils */,
 				25809A78224E3B3F00D3FA98 /* REST */,
 				25809A7B224E3C3200D3FA98 /* Models */,
@@ -195,15 +192,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		25FDBF5A224D7FFD0059368E /* CustomComponents */ = {
-			isa = PBXGroup;
-			children = (
-				25FDBF60224D839B0059368E /* ZModalViewController.swift */,
-				25FDBF5C224D800C0059368E /* ZModalViewController.xib */,
-			);
-			path = CustomComponents;
-			sourceTree = "<group>";
-		};
 		25FDBF5F224D82D60059368E /* QuoteModalChildViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +207,8 @@
 			children = (
 				451AC11195531F1BD8445DE2 /* Pods-ZapAnimatableCell.debug.xcconfig */,
 				F783A748BD1855968574982E /* Pods-ZapAnimatableCell.release.xcconfig */,
+				2CCEA6B2B46DDBB85A2D1E51 /* Pods-iOS-ZapPortfolio.debug.xcconfig */,
+				935B83D62565703C0BC759CA /* Pods-iOS-ZapPortfolio.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -226,7 +216,7 @@
 		CD44E7D7BB6273F5F40017D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				174EF0A3097D645F6E8286FE /* Pods_ZapAnimatableCell.framework */,
+				00E9328079C112B7D298A7BB /* Pods_iOS_ZapPortfolio.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -292,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				25417773224A6EDB005D2789 /* DemoHeaderTableViewCell.xib in Resources */,
-				25FDBF5E224D800C0059368E /* ZModalViewController.xib in Resources */,
 				25FDBF65224D84410059368E /* QuoteModalChildViewController.xib in Resources */,
 				25417756224A3A56005D2789 /* LaunchScreen.storyboard in Resources */,
 				25417753224A3A56005D2789 /* Assets.xcassets in Resources */,
@@ -320,7 +309,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZapAnimatableCell-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-iOS-ZapPortfolio-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -333,28 +322,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZapAnimatableCell/Pods-ZapAnimatableCell-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Argo/Argo.framework",
-				"${BUILT_PRODUCTS_DIR}/Curry/Curry.framework",
-				"${BUILT_PRODUCTS_DIR}/Runes/Runes.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-ZapPortfolio/Pods-iOS-ZapPortfolio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Argo.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Curry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Runes.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-ZapPortfolio/Pods-iOS-ZapPortfolio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZapAnimatableCell/Pods-ZapAnimatableCell-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-ZapPortfolio/Pods-iOS-ZapPortfolio-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -366,7 +342,6 @@
 			files = (
 				25417769224A3DC7005D2789 /* DemoTableViewCell.swift in Sources */,
 				25417775224A6EE8005D2789 /* DemoHeaderTableViewCell.swift in Sources */,
-				25FDBF61224D839B0059368E /* ZModalViewController.swift in Sources */,
 				2541775F224A3BBC005D2789 /* ZReusable.swift in Sources */,
 				25417765224A3CED005D2789 /* ZSwipableTableViewCell.swift in Sources */,
 				25417751224A3A54005D2789 /* iOS-ZapPortfolio.xcdatamodeld in Sources */,
@@ -525,7 +500,7 @@
 		};
 		2541775B224A3A56005D2789 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 451AC11195531F1BD8445DE2 /* Pods-ZapAnimatableCell.debug.xcconfig */;
+			baseConfigurationReference = 2CCEA6B2B46DDBB85A2D1E51 /* Pods-iOS-ZapPortfolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,7 +519,7 @@
 		};
 		2541775C224A3A56005D2789 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F783A748BD1855968574982E /* Pods-ZapAnimatableCell.release.xcconfig */;
+			baseConfigurationReference = 935B83D62565703C0BC759CA /* Pods-iOS-ZapPortfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

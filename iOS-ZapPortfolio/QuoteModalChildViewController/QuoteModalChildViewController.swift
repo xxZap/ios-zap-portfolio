@@ -8,6 +8,7 @@
 
 import Foundation
 import AlamofireImage
+import ZModalVC
 
 /// This view controller shows a random picture and a random quote.
 ///
